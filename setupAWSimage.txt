@@ -7,3 +7,7 @@
 
 2.  Install git
     sudo yum install git 
+
+3.  Start the app
+    - create a .env file with PORT=80
+    - start with "sudo /home/ec2-user/.nvm/versions/node/v14.2.0/bin/node app.js &"
