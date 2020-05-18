@@ -1,3 +1,45 @@
+/* Small devices (landscape phones) */
+
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets) */
+
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops) */
+
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops) */
+
+@media (min-width: 1200px) {
+}
+
+/* The given screen size or smaller */
+
+/* Extra small devices (portrait phones)*/
+
+@media (max-width: 575px) {
+}
+
+/* Small devices (landscape phones)*/
+
+@media (max-width: 767px) {
+}
+
+/* Medium devices (tablets)*/
+
+@media (max-width: 991px) {
+}
+
+/* Large devices (desktops)*/
+
+@media (max-width: 1199px) {
+}
+
 .jumbotron {
   background-image: url(https://source.unsplash.com/kRNZiGKtz48/1600x900);
   background-size: cover;
