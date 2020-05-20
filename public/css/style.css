@@ -1,6 +1,31 @@
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap 
+
+Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .jumbotron {
+    background-image: url(https://source.unsplash.com/kRNZiGKtz48/1920x1080);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .jumbotron {
-  background-image: url(https://source.unsplash.com/kRNZiGKtz48/1600x900);
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
 }
