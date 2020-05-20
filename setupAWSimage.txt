@@ -5,9 +5,19 @@
     . ~/.nvm/nvm.sh
     nvm install node
 
-2.  Install git
+2.  Install pm2
+        - sudo npm install pm2 -g
+        - use which command to find where pm2 command is and add to securepath of sudo
+        - run command "sudo visudo"
+        - add path of pm2 to secure_path, example:  /home/ec2-user/.nvm/versions/node/v14.2.0/bin
+        
+
+3.  Install git
     sudo yum install git 
 
-3.  Start the app
+4.  Start the app
     - create a .env file with PORT=80
-    - start with "sudo /home/ec2-user/.nvm/versions/node/v14.2.0/bin/node app.js &"
+    - Then run command:   sudo pm2 app.js
+    - Create service on startup with:   sudo pm2 startup
+
+
