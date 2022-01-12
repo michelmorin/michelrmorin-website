@@ -10,9 +10,10 @@ phases:
     commands:
       - echo Build started on `date`
       - buildDate=$(date +"%Y%m%d-%H%m")
+      - echo Build Timestamp is $IMAGE_TAG-$buildDate
       - echo Building the Docker image...          
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG-$buildDate .
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG-$buildDate      
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG-$buildDate $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG-$buildDate      
   post_build:
     commands:
       - echo Build completed on `date`
