@@ -3,11 +3,10 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Source from $BranchName branch
       - echo Logging in to Amazon ECR...
       - echo $AWS_DEFAULT_REGION
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - echo Replacing base impage in dockerfile
+      - echo Replacing base image in dockerfile
       - sed -i "s/<Replace>/$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com\/$IMAGE_NODE_REPO_NAME:$NODE_IMAGE_TAG/g" "Dockerfile"
   build:
     commands:
