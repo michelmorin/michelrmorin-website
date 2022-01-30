@@ -1,7 +1,0 @@
-# Download and install the "Extra Packages for Enterprise Linux (EPEL)"
-wget -O epel.rpm –nv https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo yum install -y ./epel.rpm
-
-# Install certbot for Apache (part of EPEL)
-sudo yum install python2-certbot-apache.noarch
-
