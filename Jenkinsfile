@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage("Build Docker Image") {
+            steps {
+                sh 'docker build -t michelmorin/michelmorin-website:latest .'
+            }
+        }
+        stage("Deploy Image") {
+            steps {
+                
+            }
+        }
+    }
+}
