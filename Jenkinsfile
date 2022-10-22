@@ -6,5 +6,10 @@ pipeline {
                 sh 'docker build -t michelmorin/michelmorin-website:latest .'
             }
         }
+        stage("Push Docker Image") {
+            steps {
+                sh 'docker push michelmorin/michelmorin-website:latest'
+            }
+        }
     }
 }
