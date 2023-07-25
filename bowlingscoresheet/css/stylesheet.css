@@ -1,0 +1,78 @@
+body {
+  background-color: white;
+  overflow-x: hidden;
+  margin: 5px;
+}
+
+#pindeck table {
+  margin: 0px auto;
+  border-collapse: collapse;
+}
+
+#pindeck {
+  margin-top: 20px;
+}
+
+#pindeck th,
+#pindeck td {
+  height: 43px;
+  width: 50px;
+  align-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#teamPinfallDiv {
+  float: right;
+}
+
+.bowlingTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.bowlingTable th,
+.bowlingTable td {
+  border: 1px solid black;
+  height: 30px;
+  width: 15px;
+  text-align: center;
+}
+
+.bowlingTable th {
+  /*background-color: blue;
+  color: white;*/
+}
+
+.totalscorebox {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.frameheader {
+  width: 7%;
+}
+
+.totalheader {
+  width: 10%;
+}
+
+.pinDown {
+  opacity: 0.1;
+}
+
+.active {
+  background-color: lightgreen;
+}
+
+.btn-group-vertical > button {
+  margin-bottom: 30px;
+  border-radius: 10px !important;
+}

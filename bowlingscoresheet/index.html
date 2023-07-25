@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font Awesome 4.7 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <title>Bowling Score Sheet</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Bowling Score Sheet</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline" id="gameSelectForm">
+            <span class="navbar-text text-white ml-sm-3">Game:</span>
+            <select class="custom-select ml-3" id="currentGame"> </select>
+          </form>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="newscoresheet">
+      <div class="container mt-5 mx-auto my-autos">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+              <h3 class="card-header">
+                New Score Sheet
+              </h3>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="numOfPlayers">How Many Players:</label>
+                    <select class="custom-select" id="numOfPlayers"> </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="numOfGames">How many games:</label>
+                    <select class="custom-select" id="numOfGames"></select>
+                  </div>
+                  <div class="form-group">
+                    <button
+                      id="startbtn"
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                    >
+                      Let's Start
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="pindeck" class="mt-5" style="text-align: center; color: black;">
+        <table class="d-inline">
+          <tr>
+            <td rowspan="4"></td>
+            <td rowspan="2">
+              <img
+                src="img/Single-Pin.gif"
+                id="pin1"
+                alt="5pin"
+                height="86"
+                width="40"
+              />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td rowspan="2">
+              <img
+                src="img/Single-Pin.gif"
+                id="pin5"
+                alt="5pin"
+                height="86"
+                width="40"
+              />
+            </td>
+            <td rowspan="4"></td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              <img
+                src="img/Single-Pin.gif"
+                id="pin2"
+                alt="5pin"
+                height="86"
+                width="40"
+              />
+            </td>
+            <td></td>
+            <td rowspan="2">
+              <img
+                src="img/Single-Pin.gif"
+                id="pin4"
+                alt="5pin"
+                height="86"
+                width="40"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td rowspan="2">
+              <img
+                src="img/Single-Pin.gif"
+                id="pin3"
+                alt="5pin"
+                height="86"
+                width="40"
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <div class="btn-group-vertical">
+          <button id="nextBtn" type="button" class="btn btn-primary shadow">
+            Next
+          </button>
+          <button id="prevBtn" type="button" class="btn btn-primary shadow">
+            Previous
+          </button>
+        </div>
+      </div>
+      <div id="scorecards"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

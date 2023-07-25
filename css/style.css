@@ -1,0 +1,43 @@
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap 
+
+Small devices (landscape phones, 576px and up) */
+@media (min-width: 0px) {
+  #landing-inner {
+    padding-top: 80px;
+  }
+}
+
+Small devices (landscape phones, 576px and up) */ @media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #landing-section {
+    background: url(../img/landingbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+  }
+
+  #landing-inner {
+    padding-top: 250px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+.navbar {
+  opacity: 0.9;
+}
+
+a:link {
+  text-decoration: none;
+}
