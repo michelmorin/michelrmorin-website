@@ -9,15 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+    - name: Git checkout
+      uses: actions/checkout@v3
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2
+    - name: Configure AWS credentials from AWS account
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        role-to-assume: ${{ secrets.AWS_ROLE }}
+        aws-region: ${{ secrets.AWS_REGION }}
+        role-session-name: GitHub-OIDC-TERRAFORM
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./ s3://michelrmorin.com --exclude '.github/*' --exclude '.git/*' --delete
+      run: aws s3 sync ./ s3://${{ secrets.AWS_BUCKET_NAME }} --exclude '.github/*' --exclude '.git/*' --delete
