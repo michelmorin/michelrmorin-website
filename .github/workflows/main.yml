@@ -4,7 +4,8 @@ on:
   push:
     branches:
     - master
-
+permissions:
+  id-token: write # This is required for aws oidc connection
 jobs:
   deploy:
     runs-on: ubuntu-latest
